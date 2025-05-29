@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Mat AIrt — AI Design in Motion</title>
+</head>
+<body>
+  <!-- ═════════ Header ═════════ -->
+  <header>
+    <a href="/" class="logo" style="display:inline-block;">
+      <img src="images/Mat_AIrt Logo.png" alt="Mat AIrt Logo" style="height:100px; vertical-align:middle;" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href='about.html' aria-current='page'>About</a></li><!-- *** NEW *** -->
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#workflows">Workflows</a></li>
+        <li><a href='contact.html'>Contact</a></li><!-- *** NEW *** -->
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ═════════ Hero ═════════ -->
+  <section class="hero">
+    <img src="images/Avatar Mati.png" alt="Mat AIrt avatar" width="300" style="margin-inline:auto; border-radius:50%; box-shadow: var(--shadow);" />
+    <h1>
+    <span class="accent">AI</span> Design in Motion
+    </h1>
+    <p>AI‑powered art, motion graphics & workflow automation that turn bold ideas into scroll‑stopping visuals and real‑world results.</p>
+    <div class="cta">
+      <button class="btn">Explore Gallery</button>
+      <button class="btn" style="background:transparent; border:1px solid var(--teal); color:var(--teal);">Let’s Collaborate</button>
+    </div>
+  </section>
+
+    <!-- ═════════ Video Carousel ═════════ -->
+  <section id="videos">
+    <h2>Video Reel</h2>
+    <div class="carousel" aria-label="AI art video carousel" style="height:80vh; max-height:800px; position:relative; overflow:hidden;">
+      <div class="carousel-track" style="display:flex; transition:transform 0.5s; height:100%;">
+        <div class="carousel-slide" style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
+          <video src="videos/Kling_Fishermen_wideok.mp4" controls loop playsinline style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
+        </div>
+        <div class="carousel-slide" style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
+          <video src="videos/UglyDuck_Kling&GPT__wideok.mp4" controls loop playsinline style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
+        </div>
+        <div class="carousel-slide" style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
+          <video src="videos/Veo3_Joke_Baguette.mp4" controls loop playsinline style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
+        </div>
+      </div>
+      <button class="prev" aria-label="Previous video" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); z-index:2;">❮</button>
+      <button class="next" aria-label="Next video" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); z-index:2;">❯</button>
+    </div>
+  </section>
+  <script>
+    /* ─────────  Carousel Logic  ───────── */
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector('.carousel button.prev');
+    const nextButton = document.querySelector('.carousel button.next');
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      slides.forEach((slide, i) => {
+        const video = slide.querySelector('video');
+        if (i === index) {
+          video.muted = false;
+          video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0;
+          video.muted = true;
+        }
+      });
+    }
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+      updateCarousel(currentIndex);
+    });
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel(currentIndex);
+    });
+
+    /* Optional: Swipe support for mobile */
+    let startX = 0;
+    track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+    });
+    track.addEventListener('touchend', (e) => {
+      const diff = e.changedTouches[0].clientX - startX;
+      if (diff > 60) prevButton.click();
+      if (diff < -60) nextButton.click();
+    });
+
+    // Initialize carousel on load
+    updateCarousel(currentIndex);
+  </script>
+
+
+  <!-- ═════════ Prompts Showcase ═════════ -->
+  <section id="prompts">
+    <h2>Prompts</h2>
+    <div class="prompts-grid">
+      <!-- Repeat prompt-card dynamically if desired -->
+      <article class="prompt-card">
+        <h4>Avatar Prompt</h4>
+        <pre>"Create an avatar of my picture in Pixar‑inspired 3D style, circular framing, charcoal background, palette #00FFD2 & #F6F3EE…"</pre>
+        <button class="copy-btn">Copy</button>
+      </article>
+      <article class="prompt-card">
+        <h4>Story Visual Prompt</h4>
+        <pre>"Hyper‑realistic 35 mm photo, golden‑hour light over misty pond, lone grey duckling paddling among yellow ducklings…"</pre>
+        <button class="copy-btn">Copy</button>
+      </article>
+      <!-- Add more prompt cards here -->
+    </div>
+  </section>
+
+  <!-- ═════════ Images Gallery ═════════ -->
+  <section id="images">
+    <h2>Image Gallery</h2>
+    <div class="images-grid">
+      <!-- Example figures; replace src with actual images -->
+      <figure>
+        <img src="assets/sample1.jpg" alt="Sample artwork 1" />
+        <figcaption>Duckling at Dawn</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/sample2.jpg" alt="Sample artwork 2" />
+        <figcaption>NeuroNaut 3D Mascot</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/sample3.jpg" alt="Sample artwork 3" />
+        <figcaption>Benjamin Franklin & Kite</figcaption>
+      </figure>
+      <!-- Add more images as needed -->
+    </div>
+  </section>
+
+  <!-- ═════════ Audio  ═════════ -->
+  <section id="audio">
+    <h2>AI Audio</h2>
+    <ul class="audio-list">
+      <li>
+        <strong>Audio: narration of story “Calamares gigantes”</strong>
+        <audio controls src="assets/audio-story.mp3"></audio>
+      </li>
+      <li>
+        <strong>Audio: background music for Story*</strong>
+        <audio controls src="assets/audio-bg.mp3"></audio>
+      </li>
+    </ul>
+  </section>
+
+
+  <!-- footer with socials -->
+  <footer>
+    <div class='socials'>
+      <a href='https://twitter.com/yourhandle' target='_blank'>Twitter</a>
+      <a href='https://instagram.com/yourhandle' target='_blank'>Instagram</a>
+      <a href='https://www.linkedin.com/in/yourhandle' target='_blank'>LinkedIn</a>
+    </div>
+    © 2025 Mat AIrt • All Rights Reserved
+  </footer>
+
+  <script>
+    /* ─────────  Copy to clipboard  ───────── */
+    document.querySelectorAll('.copy-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const promptText = btn.previousElementSibling.textContent;
+        navigator.clipboard.writeText(promptText);
+        btn.textContent = 'Copied!';
+        setTimeout(() => (btn.textContent = 'Copy'), 2000);
+      });
+    });
+  </script>
+</body>
+</html>
