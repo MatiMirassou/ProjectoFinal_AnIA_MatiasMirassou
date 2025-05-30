@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Mat AIrt — AI Design in Motion</title>
 </head>
+
 <body>
   <!-- ═════════ Header ═════════ -->
   <header>
@@ -25,34 +27,46 @@
 
   <!-- ═════════ Hero ═════════ -->
   <section class="hero">
-    <img src="images/Avatar Mati.png" alt="Mat AIrt avatar" width="300" style="margin-inline:auto; border-radius:50%; box-shadow: var(--shadow);" />
+    <img src="images/Avatar Mati.png" alt="Mat AIrt avatar" width="300"
+      style="margin-inline:auto; border-radius:50%; box-shadow: var(--shadow);" />
     <h1>
-    <span class="accent">AI</span> Design in Motion
+      <span class="accent">AI</span> Design in Motion
     </h1>
-    <p>AI‑powered art, motion graphics & workflow automation that turn bold ideas into scroll‑stopping visuals and real‑world results.</p>
+    <p>AI‑powered art, motion graphics & workflow automation that turn bold ideas into scroll‑stopping visuals and
+      real‑world results.</p>
     <div class="cta">
       <button class="btn">Explore Gallery</button>
-      <button class="btn" style="background:transparent; border:1px solid var(--teal); color:var(--teal);">Let’s Collaborate</button>
+      <button class="btn"
+        style="background:transparent; border:1px solid var(--teal); color:var(--teal);">Let’s Collaborate</button>
     </div>
   </section>
 
-    <!-- ═════════ Video Carousel ═════════ -->
+  <!-- ═════════ Video Carousel ═════════ -->
   <section id="videos">
     <h2>AI Videos</h2>
-    <div class="carousel" aria-label="AI art video carousel" style="height:80vh; max-height:800px; position:relative; overflow:hidden;">
+    <div class="carousel" aria-label="AI art video carousel"
+      style="height:80vh; max-height:800px; position:relative; overflow:hidden;">
       <div class="carousel-track" style="display:flex; transition:transform 0.5s; height:100%;">
-        <div class="carousel-slide" style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
-          <video src="videos/Kling_Fishermen_wideok.mp4" controls loop playsinline style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
+        <div class="carousel-slide"
+          style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
+          <video src="videos/Kling_Fishermen_wideok.mp4" controls loop playsinline
+            style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
         </div>
-        <div class="carousel-slide" style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
-          <video src="videos/UglyDuck_Kling&GPT__wideok.mp4" controls loop playsinline style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
+        <div class="carousel-slide"
+          style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
+          <video src="videos/UglyDuck_Kling&GPT__wideok.mp4" controls loop playsinline
+            style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
         </div>
-        <div class="carousel-slide" style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
-          <video src="videos/Veo3_Joke_Baguette.mp4" controls loop playsinline style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
+        <div class="carousel-slide"
+          style="flex:0 0 100%; height:100%; display:flex; align-items:center; justify-content:center;">
+          <video src="videos/Veo3_Joke_Baguette.mp4" controls loop playsinline
+            style="width:100%; height:100%; object-fit:cover; background:#000;"></video>
         </div>
       </div>
-      <button class="prev" aria-label="Previous video" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); z-index:2;">❮</button>
-      <button class="next" aria-label="Next video" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); z-index:2;">❯</button>
+      <button class="prev" aria-label="Previous video"
+        style="position:absolute; top:50%; left:10px; transform:translateY(-50%); z-index:2;">❮</button>
+      <button class="next" aria-label="Next video"
+        style="position:absolute; top:50%; right:10px; transform:translateY(-50%); z-index:2;">❯</button>
     </div>
   </section>
   <script>
@@ -103,59 +117,89 @@
   </script>
 
 
-  <!-- ═════════ Prompts Showcase ═════════ -->
-  <section id="prompts">
-    <h2>Prompts</h2>
-    <div class="prompts-grid">
-      <!-- Repeat prompt-card dynamically if desired -->
-      <article class="prompt-card">
-        <h4>Avatar Prompt</h4>
-        <pre>"Create an avatar of my picture in Pixar‑inspired 3D style, circular framing, charcoal background, palette #00FFD2 & #F6F3EE…"</pre>
-        <button class="copy-btn">Copy</button>
+  <!-- === NEW Showcase Section (Prompts + Images) === -->
+  <section id='showcase'>
+    <h2>Prompts & Results</h2>
+    <div class='showcase-list'>
+      <!-- Item 1 -->
+      <article class='showcase-item'>
+        <div class='showcase-text'>
+          <h3>Avatar Prompt</h3>
+          <pre>"Friendly Pixar-style tech-astronaut mascot standing and waving, deep-teal spacesuit with marfil (#F6F3EE) cuffs, belt, helmet rim, chunky boots, soft rounded proportions, short limbs, plush texture, large glossy helmet visor; visor shows a glowing cyan circuit-tree icon (no human face), subtle rim-light, gentle studio key-light from camera left, shallow depth-of-field, smooth gradient backdrop in warm beige → peach, 8-k render, cinematic volumetric lighting, photoreal materials but stylised shading, highly detailed, no text, no watermark"</pre>
+          <button class='copy-btn'>Copy</button>
+        </div>
+        <figure class='showcase-media'>
+          <img src='images/Mascot.png' alt='NeuroNaut 3D Mascot'>
+        </figure>
       </article>
-      <article class="prompt-card">
-        <h4>Story Visual Prompt</h4>
-        <pre>"Hyper‑realistic 35 mm photo, golden‑hour light over misty pond, lone grey duckling paddling among yellow ducklings…"</pre>
-        <button class="copy-btn">Copy</button>
+      <!-- Item 2 -->
+      <article class='showcase-item'>
+        <div class='showcase-text'>
+          <h3>Fable Story Prompt</h3>
+          <pre>"a wide shot of a ugly grey duck being surrronded by other siblings yellow ducks that mock him, surrounded by a natural lake setting, soft morning light, photorealistic, high detail, shallow depth of field in background, wide composition, captured with 35mm lens perspective"</pre>
+          <button class='copy-btn'>Copy</button>
+        </div>
+        <figure class='showcase-media'>
+          <img src='images/ugly_duck.png' alt='Duckling at Dawn'>
+        </figure>
       </article>
-      <!-- Add more prompt cards here -->
+      <!-- Item 3 -->
+      <article class='showcase-item'>
+        <div class='showcase-text'>
+          <h3>Realistic Story Prompt</h3>
+          <pre>"Sudden eruption of colossal squid tentacles lashing onto the boat, water spray frozen mid‑air, fishermen struggling, stormy sky overhead, hyperrealistic cinematic action still, vintage color grading, high‑contrast lighting"</pre>
+          <button class='copy-btn'>Copy</button>
+        </div>
+        <figure class='showcase-media'>
+          <img src='images/fisherman_calamar.png' alt='Benjamin Franklin & Kite'>
+        </figure>
+      </article>
     </div>
   </section>
 
-  <!-- ═════════ Images Gallery ═════════ -->
-  <section id="images">
-    <h2>Image Gallery</h2>
-    <div class="images-grid">
-      <!-- Example figures; replace src with actual images -->
-      <figure>
-        <img src="assets/sample1.jpg" alt="Sample artwork 1" />
-        <figcaption>Duckling at Dawn</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/sample2.jpg" alt="Sample artwork 2" />
-        <figcaption>NeuroNaut 3D Mascot</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/sample3.jpg" alt="Sample artwork 3" />
-        <figcaption>Benjamin Franklin & Kite</figcaption>
-      </figure>
-      <!-- Add more images as needed -->
-    </div>
-  </section>
-
-  <!-- ═════════ Audio  ═════════ -->
   <section id="audio">
-    <h2>AI Audio</h2>
-    <ul class="audio-list">
-      <li>
-        <strong>Audio: narration of story “Calamares gigantes”</strong>
-        <audio controls src="assets/audio-story.mp3"></audio>
-      </li>
-      <li>
-        <strong>Audio: background music for Story*</strong>
-        <audio controls src="assets/audio-bg.mp3"></audio>
-      </li>
-    </ul>
+    <h2>AI Audio</h2>
+
+    <div class="audio-grid">
+      <!-- Card #1 -->
+      <article class="audio-card">
+        <button class="play-btn" aria-label="Play / Pause"></button>
+
+        <div class="audio-meta">
+          <h3>Calamares gigantes</h3>
+          <p>Narration of the squid-fisherman short story.</p>
+        </div>
+
+        <div class="waveform" data-file="audios/Calamares gigantes_Openai_ash.mp3"></div>
+        <span class="duration">0:58</span>
+      </article>
+
+      <!-- Card #2 -->
+      <article class="audio-card">
+        <button class="play-btn" aria-label="Play / Pause"></button>
+
+        <div class="audio-meta">
+          <h3>Ambient Background</h3>
+          <p>Subtle music loop that underpins the story.</p>
+        </div>
+
+        <div class="waveform" data-file="audios/Shadows Whispering.mp3"></div>
+        <span class="duration">2:14</span>
+      </article>
+
+      <!-- Card #3 -->
+      <article class="audio-card">
+        <button class="play-btn" aria-label="Play / Pause"></button>
+
+        <div class="audio-meta">
+          <h3>Daily News Podcast&nbsp;Talk</h3>
+          <p>Quick newsletter in Spanish about the event in the world today.</p>
+        </div>
+
+        <div class="waveform" data-file="audios/Lingopie News in Spanish.mp3"></div>
+        <span class="duration">3:24</span>
+      </article>
+    </div>
   </section>
 
 
@@ -179,6 +223,36 @@
         setTimeout(() => (btn.textContent = 'Copy'), 2000);
       });
     });
+
+    /* ── AUDIO PLAYER LOGIC ───────────────────────── */
+    document.querySelectorAll('.audio-card').forEach(card => {
+      const btn = card.querySelector('.play-btn');
+      const file = card.querySelector('.waveform').dataset.file;
+      const audio = new Audio(file);
+
+      btn.addEventListener('click', () => {
+        // pause all other cards
+        document.querySelectorAll('.audio-card').forEach(c => {
+          if (c !== card) {
+            c._audio?.pause();
+            c.querySelector('.play-btn').classList.remove('pause');
+          }
+        });
+
+        if (audio.paused) {
+          audio.play();
+          btn.classList.add('pause');
+        } else {
+          audio.pause();
+          btn.classList.remove('pause');
+        }
+      });
+
+      // store reference so we can pause later
+      card._audio = audio;
+    });
+
   </script>
 </body>
+
 </html>
